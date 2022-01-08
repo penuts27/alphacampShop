@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>alphacamp shop</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="header-box">
+            <div class="menu-btn">
+                <div class="menu-icon"></div>
+            </div>
+            <h1 class="brand">
+                <a href="javascript:;">
+                    <img src="./alphacamp-shop_img/Logo.png" alt="ALPHACAMP-SHOP">
+                </a>
+            </h1>
+            <ul class="nav">
+                <li><a href="javascript:;">男款</a></li>
+                <li><a href="javascript:;">女款</a></li>
+                <li><a href="javascript:;">最新消息</a></li>
+                <li><a href="javascript:;">聯絡我們</a></li>
+                <li><a href="javascript:;">客製商品</a></li>
+            </ul>
+            <ul class="social-group">
+                <li><a href="javascript:;"><img src="./alphacamp-shop_img/icon-search.svg" alt="search"></a></li>
+                <li><a href="javascript:;"><img src="./alphacamp-shop_img/icon-cart.svg" alt="cart"></a></li>
+                <li><a href="javascript:;"><img src="./alphacamp-shop_img/icon-theme.svg" alt="theme"></a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="container">
+            <h2 class="title">結帳</h2>
+            <div class="row">
+                <div class="col-write">
+                    <div class="stepper-pannel">
+                        <div class="step active">
+                            <div class="circle"></div>
+                            <div class="label">寄送地址</div>
+                        </div>
+                        <div class="step">
+                            <div class="circle"></div>
+                            <span></span>
+                            <div class="label">運送方式</div>
+                        </div>
+                        <div class="step">
+                            <div class="circle"></div>
+                            <span></span>
+                            <div class="label">付款資訊</div>
+                        </div>
+                    </div>
+                    <form action="get">
+                        <div class="part part-1">
+                            <h3 class="subtitle">寄送地址</h3>
+                            <div class="part-wrapper">
+                                <div class="form-group">
+                                    <label for="last-name">稱謂</label>
+                                    <div class="select-wrapper">
+                                        <select name="last-name" id="last-name" require>
+                                            <option value="先生" selected>先生</option>
+                                            <option value="小姐">小姐</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="first-name">姓名</label>
+                                    <input type="text" id="first-name" placeholder="請輸入姓名">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">電話</label>
+                                    <input type="text" id="phone" placeholder="請輸入行動電話">
+                                </div>
+                                <div class="form-group">
+                                    <label for="e-mail">E-mail</label>
+                                    <input type="text" id="e-mail" placeholder="請輸入電子郵件">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">縣市</label>
+                                    <div class="select-wrapper">
+                                        <select name="city" id="city" require>
+                                            <option value disable selected>請選擇縣市</option>
+                                            <option value="先生">先生</option>
+                                            <option value="小姐">小姐</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">地址</label>
+                                    <input type="text" id="address" placeholder="請輸入地址">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part part-2 d-none">
+                            <h3 class="subtitle">運送方式</h3>
+                            <div class="part-wrapper">
+                                <div class="form-group">
+                                    <input name="transfer-method" value="standard" id="standard" type="radio" checked>
+                                    <label for="standard">
+                                        <div class="input-box">
+                                            <div class="input"></div>
+                                        </div>
+                                        <div class="info-box">
+                                            <div class="info">
+                                                <p>標準運送</p>
+                                                <span>免費</span>
+                                            </div>
+                                            <span>約 3~7 個工作天</span>
+                                        </div>
+                                    </label>
+                                    <input name="transfer-method" value="DHL" id="DHL" type="radio">
+                                    <label for="DHL">
+                                        <div class="input-box">
+                                            <div class="input"></div>
+                                        </div>
+                                        <div class="info-box">
+                                            <div class="info">
+                                                <p>DHL 貨運</p>
+                                                <span>$500</span>
+                                            </div>
+                                            <span>48 小時內送達</span>
+                                        </div>
+                                    </label>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part part-3 d-none">
+                            <h3 class="subtitle">付款資訊</h3>
+                            <div class="part-wrapper">
+                                <div class="form-group">
+                                    <label for="card-owner">持卡人姓名</label>
+                                    <input type="text" id="card-owner" placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-number">卡號</label>
+                                    <input type="text" id="card-number" placeholder="1111 2222 3333 4444">
+                                </div>
+                                <div class="form-group">
+                                    <label for="expiration-date">有效期限</label>
+                                    <input type="text" id="expiration-date" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">CVC / CCV </label>
+                                    <input type="text" id="address" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-cart">
+                    <div class="shop-cart">
+                        <h4 class="title">購物籃</h4>
+                        <ul class="card-list">
+                            <li>
+                                <div class="img-box"><img src="./alphacamp-shop_img/product-1.jpg" alt="破壞補丁修身牛仔褲">
+                                </div>
+                                <div class="product">
+                                    <p class="product-name">破壞補丁修身牛仔褲</p>
+                                    <div class="amount-control">
+                                        <div class="circle minus"><i></i></div>
+                                        <div class="num">
+                                            <p>1</p>
+                                        </div>
+                                        <div class="circle plus"><i></i></div>
+                                    </div>
+                                    <p class="price">$3,999</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-box"><img src="./alphacamp-shop_img/product-2.jpg" alt="刷色直筒牛仔褲"></div>
+                                <div class="product">
+                                    <p class="product-name">刷色直筒牛仔褲</p>
+                                    <div class="amount-control">
+                                        <div class="circle minus"><i></i></div>
+                                        <div class="num">
+                                            <p>1</p>
+                                        </div>
+                                        <div class="circle plus"><i></i></div>
+                                    </div>
+                                    <p class="price">$1,299</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="block">
+                            <p class="item-name">運費</p>
+                            <p class="item-price">免費</p>
+                        </div>
+                        <div class="block">
+                            <p class="item-name">小計</p>
+                            <p class="item-price">$5,298</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-control">
+                    <a href="javascript:;" style="opacity: 0; visibility: hidden;" class="button prev"><img
+                            src="./alphacamp-shop_img/arrow-black.svg" alt="">
+                        上一步</a>
+                    <a href="javascript:;" class="button next">下一步<img src="./alphacamp-shop_img/arrow.svg" alt="next">
+                    </a>
+                </div>
+            </div>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <a href="javasxript:;">
+                    <img src="./alphacamp-shop_img/Logo.png" alt="">
+                </a>
+            </div>
+            <ul class="list">
+                <li>
+                    <p class="title">客戶服務</p>
+                    <div class="content">
+                        <a href="javasxript:;">
+                            <p>運送說明</p>
+                        </a>
+                        <a href="javasxript:;"></a>
+                        <p>退換貨相關</p></a>
+                        <a href="javasxript:;"></a>
+                        <p>付款資訊</p></a>
+                        <a href="javasxript:;"></a>
+                        <p>FAQ</p></a>
+                    </div>
+                </li>
+                <li>
+                    <p class="title">關於我們</p>
+                    <div class="content">
+                        <a href="javasxript:;">
+                            <p>品牌故事</p>
+                        </a>
+                        <a href="javasxript:;">
+                            <p>媒體聯繫</p>
+                        </a>
+                        <a href="javasxript:;">
+                            <p>Press kit</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <p class="title">資訊</p>
+                    <div class="content">
+                        <a href="javasxript:;">
+                            <p>隱私權政策</p>
+                        </a>
+                        <a href="javasxript:;">
+                            <p>Cookie</p>
+                        </a>
+                        <a href="javasxript:;">
+                            <p>GDPR</p>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javasxript:;"></a>
+                    <p class="title">追蹤 ALPHA Shop</p></a>
+                    <div class="content">
+                        <a href="javasxript:;">
+                            <p>+886 02123-45678</p>
+                        </a>
+                        <div class="contact">
+                            <a href="javascript:;"><img src="./alphacamp-shop_img/icon-fb.svg" alt=""></a>
+                            <a href="javascript:;"><img src="./alphacamp-shop_img/icon-ig.svg" alt=""></a>
+                            <a href="javascript:;"><img src="./alphacamp-shop_img/icon-phone.svg" alt=""></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

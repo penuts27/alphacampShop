@@ -1,0 +1,112 @@
+@import '_variable.scss';
+
+// 產出寬度，例如:w-25
+@each $num, $val in $sizes {
+    .w-#{$num}{
+        width: #{$val}
+    }
+}
+// 產出 margin/padding，例如 .mt-0
+@each $prop, $abbrev in (margin: m, padding: p){
+    @each $num, $val in $spacers {
+        .#{$abbrev}-#{$num}{
+            #{$prop}: #{$val}
+        }  
+        .#{$abbrev}t-#{$num}{
+            #{$prop}-top: #{$val};
+        }
+        .#{$abbrev}b-#{$num}{
+            #{$prop}-bottom: #{$val};
+        }
+        .#{$abbrev}e-#{$num}{
+            #{$prop}-right: #{$val};
+        } 
+        .#{$abbrev}s-#{$num}{
+            #{$prop}-left: #{$val};
+        } 
+        .#{$abbrev}x-#{$num}{
+            #{$prop}-right: #{$val};
+            #{$prop}-left: #{$val};
+        } 
+        .#{$abbrev}y-#{$num}{
+            #{$prop}-top: #{$val};
+            #{$prop}-bottom: #{$val};
+        } 
+    }
+}
+.d-none {
+    display: none!important;
+  }
+  .d-inline {
+    display: inline!important;
+  }
+  .d-inline-block {
+    display: inline-block!important;
+  }
+  .d-block {
+    display: block!important;
+  }
+  .d-flex {
+    display: flex!important;
+  }
+
+  .flex-column {
+    flex-direction: column;
+  }
+  .justify-content-start {
+    justify-content: flex-start;
+  }
+  .justify-content-end {
+    justify-content: flex-end;
+  }
+  .justify-content-center {
+    justify-content: center;
+  }
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  .justify-content-around {
+    justify-content: space-around;
+  }
+  .align-content-start {
+    align-content: flex-start;
+  }
+  .align-content-end {
+    align-content: flex-end;
+  }
+  .align-content-center {
+    align-content: center;
+  }
+  .align-items-start {
+    align-items: flex-start;
+  }
+  .align-items-end {
+    align-items: flex-end;
+  }
+  .align-items-center {
+    align-items: center;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+// 初始值
+html{
+    font-family: 'Noto Sans TC', sans-serif;;
+    font-size: 16px;
+    height: 100%;
+    color: $black;
+}
+body{
+    height: 100%;
+
+}

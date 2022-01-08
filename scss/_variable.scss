@@ -1,0 +1,27 @@
+$primary: #F67599;
+$secondary: #222;
+$grey: #E5E5E5;
+$grey2:#F0F0F5;
+$middle-grey: #afb1bd;
+$dark-grey: #808080;
+$white: #ffffff;
+$black: #2A2A2A;
+$black2: #4A4A4A;
+$sizes: (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%
+);
+$spacer: 16px;
+$spacers: (
+    0: 0,
+    1: ($spacer * 0.25), // 4px
+    2: ($spacer * 0.5),  // 8px
+    3: ($spacer * 0.75), // 12px
+    4: $spacer, // 16px
+    5: ($spacer * 1.25), // 20px
+    6: ($spacer * 1.5),  // 24px
+    7: ($spacer * 1.75), // 28px
+    8: ($spacer * 2),  // 32px
+)

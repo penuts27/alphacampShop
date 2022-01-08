@@ -1,0 +1,40 @@
+@mixin font($size,$lh,$ls,$fw){
+    font-size: $size;
+    line-height: $lh;
+    letter-spacing: $ls;
+    font-weight: $fw;
+}
+@mixin poaCenter(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin bgCenter(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+@mixin hide_text{
+    text-indent: 101%;
+}
+// breakpoint
+@mixin lg {
+    @media(min-width: 375px){
+        @content;
+    }
+}
+
+// z-index
+@mixin gerStepNums($num){
+    @for $i from 1 through $num{
+        &:nth-child(#{$i}){
+            .circle{
+                &:after{
+                    content: '#{$i}';
+                    color: $middle-grey;
+                }
+            }
+        }
+    }
+}

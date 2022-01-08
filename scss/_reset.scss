@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+*,*:after,*:before{
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+    padding: 0;
+}
+ul,li,ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a,a:hover,a:focus{
+    text-decoration: none;
+    color: $black;
+}
+img{
+    display: block;
+}
+.btn,button,button:focus,textarea:focus,select,select:focus,a:focus{
+    outline: 0px!important;
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+button[disabled]{
+    pointer-events: none;
+}
+input:required{
+    box-shadow: none;
+}
+input:invalid{
+    box-shadow: none;
+}
