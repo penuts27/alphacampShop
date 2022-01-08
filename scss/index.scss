@@ -20,8 +20,8 @@ header{
     left: 0;
     width: 100%;
     background-color: $white;
-    // border: 1px solid #000000;
     z-index: 50;
+    // m版的底，並且做container用途
     .header-box{
         width: 100%;
         margin: 0 auto;
@@ -78,6 +78,7 @@ header{
         
     }
     .nav{
+        // 預設關閉，點擊後開啟
         position: absolute;
         opacity: 0;
         visibility: hidden;
@@ -101,6 +102,7 @@ header{
             }
         }
     }
+    // 預設關閉，點擊後開啟
     .social-group{
         position: absolute;
         opacity: 0;
@@ -117,6 +119,7 @@ header{
         }
     }
 }
+// 981為分界點
 @media (min-width: 981px){
     header{
         position: relative;
@@ -144,6 +147,7 @@ header{
             transform: scale(100%,100%);
             >li{
                 border-bottom: none;
+                // 最左padding手動移除
                 &:first-child{
                     >a{
                         padding: 0 16px 0 0;
@@ -166,6 +170,7 @@ header{
             visibility: visible;
             transform: scale(100%,100%); 
             >li{
+                // 最右padding手動移除
                 &:last-child{
                     >a{
                         padding: 18px 0 18px 16px;
@@ -179,9 +184,11 @@ header{
         }
     }
 }
+// m版導覽列展開固定用
 body.active,html.active{
     overflow: hidden;
 }
+// m版導覽列展開顯示用
 body.active .nav{
     position: relative;
     opacity: 1;
@@ -202,16 +209,14 @@ body.active .social-group{
         }
     }
 }
+// m版導覽列展開畫面撐開螢幕高
 body.active .header-box{
     height: 100vh;
 } 
-// main
+// m版版寬控制區
 main{
     display: block;
     padding-top: 60px;
-//     width: 100%;
-//     height: 1px;
-//     background-color: #000;
     .title{
         margin-bottom: 24px;
     }
@@ -221,8 +226,6 @@ main{
         width: 100%;
         .col-write,.col-cart{
             width: 100%;
-            // border: 1px solid #000;
-            // min-height: 400px;
         }
     }
 }
@@ -243,6 +246,7 @@ main{
         }
     }
 }
+// step
 .stepper-pannel{
     display: flex;
     width: 100%;
@@ -255,6 +259,7 @@ main{
         justify-content: center;
         align-items: center;
         @include gerStepNums(3);
+        // active為當前頁面狀態
         &.active{
             .circle{
                 background-color: $black;
@@ -267,6 +272,7 @@ main{
                 color: $black;
             }
         }
+        // focus為以填寫頁面狀態
         &.focus{
             .circle{
                 background-color: $black;
@@ -280,6 +286,7 @@ main{
                 color: $black;
             }
         }
+        // m版首circle齊左
         &:first-child{
             .circle{
                 margin-right: auto;
@@ -288,6 +295,7 @@ main{
                 }
             }
         }
+        // m版末circle齊左
         &:last-child{
             .circle{
                 margin-left: auto;
@@ -295,6 +303,7 @@ main{
                     margin-left: unset;
                 }
             }
+            // m版末分隔線微調
             span{
                 left: calc(-50% + 16px + 16px);
                 right: calc(32px + 16px);
@@ -308,7 +317,6 @@ main{
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            // background-color: $black;
             border:1px solid $middle-grey;
             display: flex;
             align-items: center;
@@ -349,9 +357,6 @@ main{
             }
         }
     }
-    @include lg{
-       
-    }
 }
 .subtitle{
     @include font(24px,24px,normal,700);
@@ -359,6 +364,7 @@ main{
 }
 form{
     margin-bottom: 32px;
+    // 預設表單樣式
     .part{
         label{
             display: block;
@@ -412,6 +418,7 @@ form{
             }
         }
     }
+    // 個別頁面input grid微調
     .part-1{
         .part-wrapper{
             display: grid;
@@ -431,6 +438,7 @@ form{
             }
         }
     }
+    // 個別頁面input grid微調
     .part-2{
         .part-wrapper{
             .form-group{
@@ -444,6 +452,7 @@ form{
                         }
                     }
                 }
+                // 客製化radio btn
                 label{
                     display: block;
                     padding: 10px 13px 10px 20px;
@@ -490,6 +499,7 @@ form{
             }
         }
     }
+    // 個別頁面input grid微調
     .part-3{
         .part-wrapper{
             display: grid;
@@ -589,11 +599,8 @@ form{
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
-                justify-content: space-between;
-                
-                
+                justify-content: space-between; 
                 .product-name{
-                    // color: $black;
                     @include font(16px,24px,normal,400);
                     text-align: right;
                 }
@@ -606,6 +613,7 @@ form{
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
+                    // 數量為0時不可點擊狀態
                     &.disable{
                         .circle.minus{
                             opacity: .3;

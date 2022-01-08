@@ -13,6 +13,7 @@
     <!-- header -->
     <header>
         <div class="header-box">
+            <!-- m版按鈕 -->
             <div class="menu-btn">
                 <div class="menu-icon"></div>
             </div>
@@ -40,7 +41,9 @@
         <div class="container">
             <h2 class="title">結帳</h2>
             <div class="row">
+                <!-- 左邊資料填寫欄位 -->
                 <div class="col-write">
+                    <!-- stepper -->
                     <div class="stepper-pannel">
                         <div class="step active">
                             <div class="circle"></div>
@@ -57,9 +60,12 @@
                             <div class="label">付款資訊</div>
                         </div>
                     </div>
+                    <!-- form -->
                     <form action="get">
+                        <!-- 第一頁，使用d-none搭配js控制頁數 -->
                         <div class="part part-1">
                             <h3 class="subtitle">寄送地址</h3>
+                            <!-- part-wrapper為grid wrapper -->
                             <div class="part-wrapper">
                                 <div class="form-group">
                                     <label for="last-name">稱謂</label>
@@ -98,10 +104,12 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 第二頁 -->
                         <div class="part part-2 d-none">
                             <h3 class="subtitle">運送方式</h3>
                             <div class="part-wrapper">
                                 <div class="form-group">
+                                    <!-- 客製化radio btn，input頁面不顯示 -->
                                     <input name="transfer-method" value="standard" id="standard" type="radio" checked>
                                     <label for="standard">
                                         <div class="input-box">
@@ -132,6 +140,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 第三頁 -->
                         <div class="part part-3 d-none">
                             <h3 class="subtitle">付款資訊</h3>
                             <div class="part-wrapper">
@@ -155,6 +164,7 @@
                         </div>
                     </form>
                 </div>
+                <!-- 右邊購物籃區塊 -->
                 <div class="col-cart">
                     <div class="shop-cart">
                         <h4 class="title">購物籃</h4>
@@ -199,7 +209,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- 按鈕區 -->
                 <div class="btn-control">
+                    <!-- 第一頁預設關閉上一頁 -->
                     <a href="javascript:;" style="opacity: 0; visibility: hidden;" class="button prev"><img
                             src="./alphacamp-shop_img/arrow-black.svg" alt="">
                         上一步</a>

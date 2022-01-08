@@ -1,4 +1,5 @@
 @import '_variable.scss';
+// base為預設樣式and全域樣式
 
 // 產出寬度，例如:w-25
 @each $num, $val in $sizes {
@@ -99,7 +100,7 @@
     cursor: pointer;
   }
   
-// 初始值
+// global
 html{
     font-family: 'Noto Sans TC', sans-serif;;
     font-size: 16px;
